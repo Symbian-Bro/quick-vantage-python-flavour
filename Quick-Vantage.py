@@ -64,8 +64,8 @@ def status_n_input():
     print("|         Quick-Vantage         |")
     print("|===============================|")
     print("|  Current Status:              |")
-    print(f"|  - Conservation Mode: {p}      |")
-    print(f"|  - Function Lock:     {q}      |")
+    print(f"|  - Conservation Mode: {p}    |")
+    print(f"|  - Function Lock:     {q}    |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
@@ -79,7 +79,7 @@ def main():
 
     while True:
         status_n_input()
-        choice = input("\nChoose an option (1-3, q): ").lower()
+        choice = input("\nChoose an option (1-2, q): ").lower()
 
         if choice == '1':
             toggle_conservation()
