@@ -20,18 +20,45 @@ def read_file(path):
     with open(path, 'r') as f:
             return int(f.read().strip())
 
+def write_file(path, value):
+    try:
+        with open(path, 'w') as f:
+            f.write(str(value))
+        return True
+    except Exception as e:
+        print(f"Error writing to {path}: {e}")
+        return False
+
+# Conservation Mode
+def toggle_conservation():
+    current = read_file(CONSERVATION_PATH)
+    if current is not None:
+        new_value = 0 if current == 1 else 1
+        if write_file(CONSERVATION_PATH, new_value):
+            status = "enabled" if new_value == 1 else "disabled"
+            print(f"✅ Conservation Mode {status}")
+
+# Function Lock
+def toggle_fn_lock():
+    current = read_file(FN_LOCK_PATH)
+    if current is not None:
+        new_value = 0 if current == 1 else 1
+        if write_file(FN_LOCK_PATH, new_value):
+            status = "enabled" if new_value == 1 else "disabled"
+            print(f"✅ Function Lock {status}")
+
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
 
-    if cons == "1":
+    if cons == 1:
         p = "[ ON]"
     else:
-        p = "[ OFF]"
-    if fn_lock == "1":
+        p = "[OFF]"
+    if fn_lock == 1:
         q = "[ ON]"
     else:
-        q = "[ OFF]"
+        q = "[OFF]"
 
     print("\n._______________________________.")
     print("|         Quick-Vantage         |")
