@@ -11,7 +11,6 @@ def status():
         q = [ ON]
     else:
         q = [ OFF]
-    kbd_str = str(kbd) if kbd is not None else "[N/A]"
 
     print("\n._______________________________.")
     print("|         Quick-Vantage         |")
@@ -19,11 +18,9 @@ def status():
     print("|  Current Status:              |")
     fprint(f"|  - Conservation Mode: {p}      |")
     print(f"|  - Function Lock:     {q}      |")
-    print(f"|  - Backlight level:   {kbd_str}        |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
     print("|  2) Toggle Function Lock      |")
-    print("|  3) Set Keyboard Backlight    |")
     print("|  q) Quit                      |")
     print("|_______________________________|")

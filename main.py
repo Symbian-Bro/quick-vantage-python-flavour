@@ -14,7 +14,7 @@ def main():
             break # See ya later
         else:
             print("Invalid option, please try again")
-        time.sleep(1)  # I'll be back soon
+        time.sleep(1) # Sleep
 
 if __name__ == "__main__":
     main()
