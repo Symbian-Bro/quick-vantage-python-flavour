@@ -89,10 +89,10 @@ def main():
             toggle_fn_lock()
         elif choice == 'q':
             print("Goodbye!")
-            break # See ya later
+            break
         else:
             print("Invalid option, please try again")
-        time.sleep(1)  # I'll be back soon
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
