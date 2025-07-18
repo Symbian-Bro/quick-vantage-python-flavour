@@ -23,22 +23,21 @@ def read_file(path):
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
-    kbd_backlight = read_file(KBD_BACKLIGHT_PATH)
 
     if cons == "1":
-        p = [ ON]
+        p = "[ ON]"
     else:
-        p = [ OFF]
+        p = "[ OFF]"
     if fn_lock == "1":
-        q = [ ON]
+        q = "[ ON]"
     else:
-        q = [ OFF]
+        q = "[ OFF]"
 
     print("\n._______________________________.")
     print("|         Quick-Vantage         |")
     print("|===============================|")
     print("|  Current Status:              |")
-    fprint(f"|  - Conservation Mode: {p}      |")
+    print(f"|  - Conservation Mode: {p}      |")
     print(f"|  - Function Lock:     {q}      |")
     print("|===============================|")
     print("|  Options:                     |")
@@ -52,7 +51,7 @@ def main():
     root_checker_boy()
 
     while True:
-        status()
+        status_n_input()
         choice = input("\nChoose an option (1-3, q): ").lower()
 
         if choice == '1':
