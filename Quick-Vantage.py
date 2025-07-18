@@ -2,12 +2,14 @@ import os
 import sys
 import glob
 import time
-def root_checker_boy():
-    if os.getuid() != 0:
-        print("Requesting root privileges...")
-        #The following line will try executing the script with sudo (That's what she said)
-        os.execvp('sudo', ['sudo', sys.executable] + sys.argv)
-        sys.exit(1)
+# def root_checker_boy():
+    # if os.getuid() != 0:
+        # print("Requesting root privileges...")
+        # The following line will try executing the script with sudo (That's what she said)
+        # os.execvp('sudo', ['sudo', sys.executable] + sys.argv)
+        # sys.exit(1)
+
+# Commented out the root checker function because the .py file itself is run with sudo (sudo python3 Quick-Vantage.py)
 
 def find_path(pattern):# The pattern is the path to the file we are looking for
     return glob.glob(pattern)[0]# 0 is the first match. That's what we are looking for
@@ -64,8 +66,8 @@ def status_n_input():
     print("|         Quick-Vantage         |")
     print("|===============================|")
     print("|  Current Status:              |")
-    print(f"|  - Conservation Mode: {p}    |")
-    print(f"|  - Function Lock:     {q}    |")
+    print(f"|  - Conservation Mode: {p}   |")
+    print(f"|  - Function Lock:     {q}   |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
@@ -75,7 +77,7 @@ def status_n_input():
     print("\n")  # Just a new line
 
 def main():
-    root_checker_boy()
+    # root_checker_boy()
 
     while True:
         status_n_input()
