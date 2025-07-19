@@ -2,7 +2,7 @@ import os
 import sys
 import glob
 import time
-# def root_checker_boy():
+# def root_checker():
     # if os.getuid() != 0:
         # print("Requesting root privileges...")
         # The following line will try executing the script with sudo (That's what she said)
@@ -77,7 +77,7 @@ def status_n_input():
     print("\n")  # Just a new line
 
 def main():
-    # root_checker_boy()
+    # root_checker()
 
     while True:
         status_n_input()
