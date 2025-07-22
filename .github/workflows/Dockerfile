@@ -1,26 +1,7 @@
-name: Build and Push Docker Image
+FROM python:3.10-slim
 
-on:
-  push:
-    branches: [ "main" ]
+WORKDIR /app
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+COPY Quick-Vantage.py .
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
+ENTRYPOINT ["python", "Quick-Vantage.py"]
