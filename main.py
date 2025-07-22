@@ -11,7 +11,7 @@ def main():
             toggle_fn_lock()
         elif choice == 'q':
             print("Goodbye!")
-            break # See ya later
+            break
         else:
             print("Invalid option, please try again")
         time.sleep(1) # Sleep
