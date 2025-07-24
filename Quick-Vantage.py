@@ -18,6 +18,7 @@ def find_path(pattern):# The pattern is the path to the file we are looking for
 CONSERVATION_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/conservation*")
 FN_LOCK_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/fn*")
 BACKLIGHT_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/leds/platform::kbd_backlight/brightness")
+cpu_info = find_path("/proc/cpuinfo")
 def read_file(path):
     with open(path, 'r') as f:
             return int(f.read().strip())
@@ -103,6 +104,12 @@ def main():
         elif choice == '3':
                 level = int(input("Enter backlight level (0-3): "))
                 toggle_backlight(level)
+        elif choice == '4':
+            with open("/proc/cpuinfo", "r") as f:
+        for line in f:
+            if "model name" in line:
+                    print(line.split(":", 1)[1].strip())
+                    break
         elif choice == 'q':
             print("Goodbye!")
             break
