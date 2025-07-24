@@ -61,7 +61,7 @@ def toggle_backlight(level):
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
-    kbd_level = read_file(BACKLIGHT_PATH)
+    kbd = read_file(BACKLIGHT_PATH)
 
     if cons == 1:
         p = "[ ON]"
@@ -78,6 +78,7 @@ def status_n_input():
     print("|  Current Status:              |")
     print(f"|  - Conservation Mode: {p}   |")
     print(f"|  - Function Lock:     {q}   |")
+    print(f"|  - Keyboard Backlight: {kbd}|")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
