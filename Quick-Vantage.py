@@ -17,7 +17,7 @@ def find_path(pattern):# The pattern is the path to the file we are looking for
 # Path variables (Absolute cinema. The glob module will work its magic)
 CONSERVATION_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/conservation*")
 FN_LOCK_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/fn*")
-
+BACKLIGHT_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/leds/platform::kbd_backlight/brightness")
 def read_file(path):
     with open(path, 'r') as f:
             return int(f.read().strip())
