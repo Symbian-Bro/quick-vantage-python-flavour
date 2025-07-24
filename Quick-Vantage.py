@@ -84,6 +84,7 @@ def status_n_input():
     print("|  1) Toggle Conservation Mode  |")
     print("|  2) Toggle Function Lock      |")
     print("|  3) Set Keyboard Backlight    |")
+    print("|  4) View CPU Information      |")
     print("|  q) Quit                      |")
     print("|_______________________________|")
     print("\n")  # Just a new line
