@@ -106,10 +106,10 @@ def main():
                 toggle_backlight(level)
         elif choice == '4':
             with open("/proc/cpuinfo", "r") as f:
-        for line in f:
-            if "model name" in line:
-                    print(line.split(":", 1)[1].strip())
-                    break
+                 for line in f:
+                     if "model name" in line:
+                         print(line.split(":", 1)[1].strip())
+                         break
         elif choice == 'q':
             print("Goodbye!")
             break
