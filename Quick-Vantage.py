@@ -49,9 +49,19 @@ def toggle_fn_lock():
             status = "enabled" if new_value == 1 else "disabled"
             print(f"✅ Function Lock {status}")
 
+def toggle_backlight(level):
+    if level < 0 or level > 3:
+        print("Invalid backlight level. Please choose between 0 and 3.")
+        return
+    if write_file(BACKLIGHT_PATH, level):
+        print(f"✅ Keyboard Backlight set to Level {level}")
+    else:
+        print("❌ Failed to set Keyboard Backlight level")
+
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
+    kbd_level = read_file(BACKLIGHT_PATH)
 
     if cons == 1:
         p = "[ ON]"
