@@ -83,6 +83,7 @@ def status_n_input():
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
     print("|  2) Toggle Function Lock      |")
+    print("|  3) Set Keyboard Backlight    |")
     print("|  q) Quit                      |")
     print("|_______________________________|")
     print("\n")  # Just a new line
@@ -92,12 +93,15 @@ def main():
 
     while True:
         status_n_input()
-        choice = input("\nChoose an option (1-2, q): ").lower()
+        choice = input("\nChoose an option (1-3, q): ").lower()
 
         if choice == '1':
             toggle_conservation()
         elif choice == '2':
             toggle_fn_lock()
+        elif choice == '3':
+                level = int(input("Enter backlight level (0-3): "))
+                toggle_backlight(level)
         elif choice == 'q':
             print("Goodbye!")
             break
