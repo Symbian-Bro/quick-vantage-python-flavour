@@ -84,7 +84,7 @@ def status_n_input():
     print(f"|  - Conservation Mode : {p}  |")
     print(f"|  - Function Lock     : {q}  |")
     print(f"|  - Keyboard Backlight: {kbd}      |")
-    print(f"|  - System Temperature: {t} °C |")
+    print(f"|  - System Temperature: {t}°C   |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
