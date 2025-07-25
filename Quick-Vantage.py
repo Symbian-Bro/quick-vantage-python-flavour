@@ -77,7 +77,7 @@ def status_n_input():
         q = "[OFF]"
 
     print("\n._______________________________.")
-    print("|         Quick-Vantage         |")
+    print(f"| {tmp}   Quick-Vantage         |")
     print("|===============================|")
     print("|  Current Status:              |")
     print(f"|  - Conservation Mode : {p}  |")
