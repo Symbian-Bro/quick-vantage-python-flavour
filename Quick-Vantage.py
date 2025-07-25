@@ -100,7 +100,7 @@ def main():
 
     while True:
         status_n_input()
-        choice = input("\nChoose an option (1-3, q): ").lower()
+        choice = input("Choose an option (1-3, q): ").lower()
 
         if choice == '1':
             toggle_conservation()
