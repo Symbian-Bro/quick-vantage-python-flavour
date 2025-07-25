@@ -77,12 +77,13 @@ def status_n_input():
         q = "[OFF]"
 
     print("\n._______________________________.")
-    print(f"| {tmp}   Quick-Vantage         |")
+    print("|         Quick-Vantage         |")
     print("|===============================|")
     print("|  Current Status:              |")
     print(f"|  - Conservation Mode : {p}  |")
     print(f"|  - Function Lock     : {q}  |")
     print(f"|  - Keyboard Backlight: {kbd}      |")
+    print(f"|  - System Temperature: {tmp} °C |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
