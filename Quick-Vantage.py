@@ -19,6 +19,8 @@ CONSERVATION_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/conse
 FN_LOCK_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/fn*")
 BACKLIGHT_PATH = find_path("/sys/bus/platform/drivers/ideapad_acpi/VPC*/leds/platform::kbd_backlight/brightness")
 cpu_info = find_path("/proc/cpuinfo")
+temp_info = find_path("/sys/class/thermal/thermal_zone*/temp")
+
 def read_file(path):
     with open(path, 'r') as f:
             return int(f.read().strip())
@@ -63,6 +65,7 @@ def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
     kbd = read_file(BACKLIGHT_PATH)
+    tmp = read_file(temp_info)
 
     if cons == 1:
         p = "[ ON]"
