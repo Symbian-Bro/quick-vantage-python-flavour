@@ -53,8 +53,8 @@ def toggle_fn_lock():
             print(f"✅ Function Lock {status}")
 
 def toggle_backlight(level):
-    if level < 0 or level > 3:
-        print("Invalid backlight level. Please choose between 0 and 3.")
+    if level < 0 or level > 2:
+        print("Invalid backlight level. Please choose between 0 and 2.")
         return
     if write_file(BACKLIGHT_PATH, level):
         print(f"✅ Keyboard Backlight set to Level {level}")
@@ -107,7 +107,7 @@ def main():
         elif choice == '2':
             toggle_fn_lock()
         elif choice == '3':
-                level = int(input("Enter backlight level (0-3): "))
+                level = int(input("Enter backlight level (0-2): "))
                 toggle_backlight(level)
         elif choice == '4':
             with open("/proc/cpuinfo", "r") as f:
