@@ -66,6 +66,7 @@ def status_n_input():
     fn_lock = read_file(FN_LOCK_PATH)
     kbd = read_file(BACKLIGHT_PATH)
     tmp = read_file(temp_info)
+    t = tmp/1000
 
     if cons == 1:
         p = "[ ON]"
@@ -83,7 +84,7 @@ def status_n_input():
     print(f"|  - Conservation Mode : {p}  |")
     print(f"|  - Function Lock     : {q}  |")
     print(f"|  - Keyboard Backlight: {kbd}      |")
-    print(f"|  - System Temperature: {tmp} °C |")
+    print(f"|  - System Temperature: {t} °C |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
