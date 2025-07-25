@@ -66,7 +66,7 @@ def status_n_input():
     fn_lock = read_file(FN_LOCK_PATH)
     kbd = read_file(BACKLIGHT_PATH)
     tmp = read_file(temp_info)
-    t = tmp/1000
+    t = int(tmp/1000)
 
     if cons == 1:
         p = "[ ON]"
