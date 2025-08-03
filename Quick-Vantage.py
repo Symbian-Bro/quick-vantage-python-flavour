@@ -86,6 +86,7 @@ def status_n_input():
     kbd = read_file(BACKLIGHT_PATH)
     tmp = read_file(temp_info)
     t = int(tmp/1000)
+    total_mem, used_mem, free_mem = get_memory_stats()
 
     if cons == 1:
         p = "[ ON]"
