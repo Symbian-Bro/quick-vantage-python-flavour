@@ -107,6 +107,8 @@ def status_n_input():
     print(f"|  - System Temperature: {t}°C   |")
     print("|-------------------------------|")
     print("|         Memory Usage          |")
+    print("|-------------------------------|")
+    print(f"|Used : {used_mem}MB | Total : {total_mem}MB|")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
