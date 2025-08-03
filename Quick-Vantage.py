@@ -64,6 +64,14 @@ def toggle_backlight(level):
 
 # Memory info
 def get_memory_stats():
+    meminfo = {}
+    try:
+        with open('/proc/meminfo', 'r') as f:
+            for line in f:
+                parts = line.split(':')
+                key = parts[0]
+                value = parts[1].strip().split()[0]  # get the number only
+                meminfo[key] = int(value)
 
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
