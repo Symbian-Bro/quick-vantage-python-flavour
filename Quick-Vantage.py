@@ -74,7 +74,8 @@ def get_memory_stats():
                 meminfo[key] = int(value)
         total = meminfo.get('MemTotal', 0) / 1024
         free = meminfo.get('MemAvailable', 0) / 1024
-        return total, used
+        used = total - free
+        return total, used, free
     except Exception as e:
         print(f"Error reading memory stats: {e}")
         return 0, 0, 0
