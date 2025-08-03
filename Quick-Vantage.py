@@ -62,6 +62,9 @@ def toggle_backlight(level):
     else:
         print("❌ Failed to set Keyboard Backlight level")
 
+# Memory info
+def get_memory_stats():
+
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
     fn_lock = read_file(FN_LOCK_PATH)
