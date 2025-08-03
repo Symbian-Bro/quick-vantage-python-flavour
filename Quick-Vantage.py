@@ -105,7 +105,7 @@ def status_n_input():
     print(f"|  - Function Lock     : {q}  |")
     print(f"|  - Keyboard Backlight: {kbd}      |")
     print(f"|  - System Temperature: {t}°C   |")
-    print(f"|  - Memory (Used/Total): {used_mem}MB / {total_mem}MB |")
+    print("|  - Memory Usage      :        |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
