@@ -70,8 +70,14 @@ def get_memory_stats():
             for line in f:
                 parts = line.split(':')
                 key = parts[0]
-                value = parts[1].strip().split()[0]  # get the number only
+                value = parts[1].strip().split()[0]
                 meminfo[key] = int(value)
+        total = meminfo.get('MemTotal', 0) / 1024
+        free = meminfo.get('MemAvailable', 0) / 1024
+        return total, used
+    except Exception as e:
+        print(f"Error reading memory stats: {e}")
+        return 0, 0, 0
 
 def status_n_input():
     cons = read_file(CONSERVATION_PATH)
