@@ -75,7 +75,7 @@ def get_memory_stats():
         total = meminfo.get('MemTotal', 0) // 1024
         free = meminfo.get('MemAvailable', 0) // 1024
         used = total - free
-        return total, used, free
+        return total, used
     except Exception as e:
         print(f"Error reading memory stats: {e}")
         return 0, 0, 0
@@ -86,7 +86,7 @@ def status_n_input():
     kbd = read_file(BACKLIGHT_PATH)
     tmp = read_file(temp_info)
     t = int(tmp/1000)
-    total_mem, used_mem, free_mem = get_memory_stats()
+    total_mem, used_mem = get_memory_stats()
 
     if cons == 1:
         p = "[ ON]"
