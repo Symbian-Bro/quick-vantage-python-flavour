@@ -1,4 +1,4 @@
-# Quick-Vantage-Python-flavour-
+# Quick-Vantage-Python-flavour
 About : 
 This is a Python port of quick-vantage. The development of the shell version has been ceased indefinitely.
 
