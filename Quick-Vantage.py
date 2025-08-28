@@ -2,12 +2,12 @@ import os
 import sys
 import glob
 import time
-# def root_checker():
-    # if os.getuid() != 0:
-        # print("Requesting root privileges...")
+def root_checker():
+    if os.getuid() != 0:
+        print("Requesting root privileges...")
         # The following line will try executing the script with sudo (That's what she said)
-        # os.execvp('sudo', ['sudo', sys.executable] + sys.argv)
-        # sys.exit(1)
+        os.execvp('sudo', ['sudo', sys.executable] + sys.argv)
+        sys.exit(1)
 
 # Commented out the root checker function because the .py file itself is run with sudo (sudo python3 Quick-Vantage.py)
 
@@ -120,7 +120,7 @@ def status_n_input():
     print("\n")  # Just a new line
 
 def main():
-    # root_checker()
+    root_checker()
 
     while True:
         status_n_input()
