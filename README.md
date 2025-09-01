@@ -3,7 +3,8 @@ About :
 This is a Python port of quick-vantage. The development of the shell version has been ceased indefinitely.
 
 Installation :
-pip install quick-vantage
+pip install quick-vantage (Deprecated)
+Collect the .deb package from the releases and install it using a package manager.
 
 P.S : Add this to your ".zshrc" or ".bash_aliases" file for convenience - alias vantage="sudo python3 quick-vantage.py" 
 
