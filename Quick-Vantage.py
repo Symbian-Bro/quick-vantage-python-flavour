@@ -108,7 +108,7 @@ def status_n_input():
     print("|-------------------------------|")
     print("|         Memory Usage          |")
     print("|-------------------------------|")
-    print(f"|Used : {used_mem:.1f}GB | Total : {total_mem}GB|")
+    print(f"|  Used : {used_mem:.1f}GB | Total : {total_mem}GB  |")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
