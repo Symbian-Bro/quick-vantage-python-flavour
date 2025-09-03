@@ -72,8 +72,8 @@ def get_memory_stats():
                 key = parts[0]
                 value = parts[1].strip().split()[0]
                 meminfo[key] = int(value)
-        total = meminfo.get('MemTotal', 0) // 1024
-        free = meminfo.get('MemAvailable', 0) // 1024
+        total = meminfo.get('MemTotal', 0) // (1024*1024)
+        free = meminfo.get('MemAvailable', 0) / (1024*1024)
         used = total - free
         return total, used
     except Exception as e:
@@ -108,7 +108,7 @@ def status_n_input():
     print("|-------------------------------|")
     print("|         Memory Usage          |")
     print("|-------------------------------|")
-    print(f"|Used : {used_mem}MB | Total : {total_mem}MB|")
+    print(f"|Used : {used_mem:.1f}GB | Total : {total_mem}GB|")
     print("|===============================|")
     print("|  Options:                     |")
     print("|  1) Toggle Conservation Mode  |")
