@@ -10,7 +10,7 @@ The tool provides a simple command-line interface and a graphical user interface
   * **Function Lock:** Toggle the behavior of the function keys on your keyboard.
   * **Keyboard Backlight:** Adjust the brightness of your keyboard's backlight.
 
-<img width="1242" height="827" alt="Nah" src="[https://github.com/user-attachments/assets/16126aa5-37b2-4f46-9a98-d0708d0284df](https://github.com/user-attachments/assets/16126aa5-37b2-4f46-9a98-d0708d0284df)">
+<img width="1242" height="827" alt="Nah" src="https://github.com/user-attachments/assets/16126aa5-37b2-4f46-9a98-d0708d0284df">
 
 ## Features
 
