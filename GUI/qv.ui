@@ -173,7 +173,7 @@ Mode</string>
               <property name="geometry">
                <rect>
                 <x>10</x>
-                <y>20</y>
+                <y>30</y>
                 <width>601</width>
                 <height>41</height>
                </rect>
@@ -232,6 +232,22 @@ Mode</string>
                 </widget>
                </item>
               </layout>
+             </widget>
+             <widget class="QLabel" name="label_4">
+              <property name="geometry">
+               <rect>
+                <x>15</x>
+                <y>0</y>
+                <width>591</width>
+                <height>27</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Adjust Brightness&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
              </widget>
             </widget>
            </item>
