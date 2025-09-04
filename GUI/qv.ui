@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>704</width>
-    <height>753</height>
+    <width>662</width>
+    <height>701</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -28,6 +34,12 @@
     </property>
     <item>
      <widget class="QWidget" name="Toggles" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
@@ -194,8 +206,20 @@ Mode</string>
                </item>
                <item>
                 <widget class="QSlider" name="horizontalSlider">
+                 <property name="maximum">
+                  <number>2</number>
+                 </property>
+                 <property name="tracking">
+                  <bool>false</bool>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="invertedAppearance">
+                  <bool>false</bool>
+                 </property>
+                 <property name="invertedControls">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -226,6 +250,15 @@ Mode</string>
                </item>
                <item>
                 <widget class="QSlider" name="horizontalSlider_2">
+                 <property name="maximum">
+                  <number>100</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>10</number>
+                 </property>
+                 <property name="tracking">
+                  <bool>false</bool>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
