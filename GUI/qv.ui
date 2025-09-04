@@ -186,7 +186,7 @@ Mode</string>
                <rect>
                 <x>10</x>
                 <y>30</y>
-                <width>601</width>
+                <width>551</width>
                 <height>41</height>
                </rect>
               </property>
@@ -230,7 +230,7 @@ Mode</string>
                <rect>
                 <x>10</x>
                 <y>70</y>
-                <width>601</width>
+                <width>551</width>
                 <height>41</height>
                </rect>
               </property>
@@ -254,7 +254,7 @@ Mode</string>
                   <number>100</number>
                  </property>
                  <property name="singleStep">
-                  <number>10</number>
+                  <number>20</number>
                  </property>
                  <property name="tracking">
                   <bool>false</bool>
@@ -282,6 +282,32 @@ Mode</string>
                <set>Qt::AlignCenter</set>
               </property>
              </widget>
+             <widget class="QLabel" name="label_5">
+              <property name="geometry">
+               <rect>
+                <x>570</x>
+                <y>30</y>
+                <width>41</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_6">
+              <property name="geometry">
+               <rect>
+                <x>570</x>
+                <y>70</y>
+                <width>96</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>50</string>
+              </property>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -295,5 +321,38 @@ Mode</string>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_5</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>363</x>
+     <y>601</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>602</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_6</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>637</x>
+     <y>642</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
