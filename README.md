@@ -25,6 +25,12 @@ The tool provides a simple command-line interface and a graphical user interface
 
 The recommended way to install Quick-Vantage is to download the latest `.deb` package from the releases and install it with your preferred package manager.
 
+### Deprecated method 
+
+You can install the package using pip too. But you may face problems while giving elevated permissions. So it is not recommended.
+
+```pip install quick-vantage```
+
 ### Manual Installation
 
 You can also run the script directly:
