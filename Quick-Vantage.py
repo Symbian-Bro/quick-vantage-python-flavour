@@ -121,30 +121,32 @@ def status_n_input():
 
 def main():
     root_checker()
+    try:
+        while True:
+            status_n_input()
+            choice = input("Choose an option (1-4, q): ").lower()
 
-    while True:
-        status_n_input()
-        choice = input("Choose an option (1-4, q): ").lower()
-
-        if choice == '1':
-            toggle_conservation()
-        elif choice == '2':
-            toggle_fn_lock()
-        elif choice == '3':
+            if choice == '1':
+                toggle_conservation()
+            elif choice == '2':
+                toggle_fn_lock()
+            elif choice == '3':
                 level = int(input("Enter backlight level (0-2): "))
                 toggle_backlight(level)
-        elif choice == '4':
-            with open("/proc/cpuinfo", "r") as f:
-                 for line in f:
-                     if "model name" in line:
-                         print(line.split(":", 1)[1].strip())
-                         break
-        elif choice == 'q':
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid option, please try again")
-        time.sleep(1)
+            elif choice == '4':
+                with open("/proc/cpuinfo", "r") as f:
+                    for line in f:
+                        if "model name" in line:
+                            print(line.split(":", 1)[1].strip())
+                            break
+            elif choice == 'q':
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid option, please try again")
+                time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nGoodbye!")
 
 if __name__ == "__main__":
     main()
