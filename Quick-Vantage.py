@@ -89,34 +89,34 @@ def status_n_input():
     total_mem, used_mem = get_memory_stats()
 
     if cons == 1:
-        p = "[ ON]"
+        p = "[ ON ]"
     else:
-        p = "[OFF]"
+        p = "[ OFF]"
     if fn_lock == 1:
-        q = "[ ON]"
+        q = "[ ON ]"
     else:
-        q = "[OFF]"
+        q = "[ OFF]"
 
-    print("\n._______________________________.")
-    print("|         Quick-Vantage         |")
-    print("|===============================|")
-    print("|  Current Status:              |")
+    print("\n.________________________________.")
+    print("|         Quick-Vantage          |")
+    print("|================================|")
+    print("|  Current Status:               |")
     print(f"|  - Conservation Mode : {p}  |")
     print(f"|  - Function Lock     : {q}  |")
-    print(f"|  - Keyboard Backlight: {kbd}      |")
-    print(f"|  - System Temperature: {t}°C   |")
-    print("|-------------------------------|")
-    print("|         Memory Usage          |")
-    print("|-------------------------------|")
-    print(f"|  Used : {used_mem:.1f}GB | Total : {total_mem:.0f}GB  |")
-    print("|===============================|")
-    print("|  Options:                     |")
-    print("|  1) Toggle Conservation Mode  |")
-    print("|  2) Toggle Function Lock      |")
-    print("|  3) Set Keyboard Backlight    |")
-    print("|  4) View CPU Information      |")
-    print("|  q) Quit                      |")
-    print("|_______________________________|")
+    print(f"|  - Keyboard Backlight: {kbd}       |")
+    print(f"|  - System Temperature: {t}°C    |")
+    print("|--------------------------------|")
+    print("|         Memory Usage           |")
+    print("|--------------------------------|")
+    print(f"|  Used : {used_mem:.1f}GB | Total : {total_mem:.0f}GB   |")
+    print("|================================|")
+    print("|  Options:                      |")
+    print("|  1) Toggle Conservation Mode   |")
+    print("|  2) Toggle Function Lock       |")
+    print("|  3) Set Keyboard Backlight     |")
+    print("|  4) View CPU Information       |")
+    print("|  q) Quit                       |")
+    print("|________________________________|")
     print("\n")  # Just a new line
 
 def main():
